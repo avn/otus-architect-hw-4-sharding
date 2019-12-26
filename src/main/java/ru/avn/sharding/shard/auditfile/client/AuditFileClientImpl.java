@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
-import ru.avn.sharding.BeanToQueryParametersMapper;
+import ru.avn.sharding.utils.BeanToQueryParametersMapper;
 import ru.avn.sharding.beans.AuditFileCreate;
 import ru.avn.sharding.beans.AuditFileSearchCriteria;
 import ru.avn.sharding.beans.AuditFileType;

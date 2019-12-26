@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Slf4j
-@Profile(ProfileName.REPOSITORY)
+@Profile(ProfileName.SHARD_REPOSITORY)
 @Service(RepositoryAuditFileService.SERVICE_NAME)
 @RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class RepositoryAuditFileService implements AuditFileService {

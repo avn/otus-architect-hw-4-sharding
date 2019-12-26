@@ -1,4 +1,4 @@
-package ru.avn.sharding;
+package ru.avn.sharding.utils;
 
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;

@@ -22,7 +22,6 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.hibernate:hibernate-jpamodelgen'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -30,10 +29,12 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-//	testImplementation 'io.projectreactor:reactor-test'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.hibernate:hibernate-jpamodelgen'
+	annotationProcessor 'org.hibernate:hibernate-jpamodelgen'
+	compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
 
 }
 

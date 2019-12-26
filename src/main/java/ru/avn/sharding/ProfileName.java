@@ -4,6 +4,6 @@ public interface ProfileName {
 
     String SHARD_PROXY = "SHARD_PROXY";
 
-    String REPOSITORY = "REPOSITORY";
+    String SHARD_REPOSITORY = "SHARD_REPOSITORY";
 
 }
