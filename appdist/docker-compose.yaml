@@ -1,0 +1,17 @@
+version: "3"
+services:
+  proxy:
+    image: avn/otus-sharding:1.0
+    ports:
+      - "8080:8080"
+    command: ['--spring.profiles.active=SHARD_PROXY',
+              '--server.port=8080',
+              '--audit.file.api.endpoint.shards.0=http://shard1:9201',
+              '--audit.file.api.endpoint.shards.1=http://shard2:9202',
+    ]
+  shard1:
+    image: avn/otus-sharding:1.0
+    command: ['--spring.profiles.active=SHARD_REPOSITORY', '--server.port=9201']
+  shard2:
+    image: avn/otus-sharding:1.0
+    command: ['--spring.profiles.active=SHARD_REPOSITORY', '--server.port=9202']
