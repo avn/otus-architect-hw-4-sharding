@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 }
 
+bootJar.archiveFileName = 'sharding.jar'
 group = 'ru.avn'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -41,3 +42,10 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+
+task prepareDist(type: Copy) {
+	from "${buildDir}/libs"
+	into "/appdist/"
+}
+
